@@ -9,9 +9,10 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render 'shared/nav' %>
+    <%= js add_gritter(flash[:notice], :title => "Notice!", :sticky => false, :time => 1000) %>
+    <%= js add_gritter(flash[:alert], :title => "Alert!", :sticky => false, :time => 1000) %>
+    <%= js add_gritter(flash[:error], :title => "Error!", :sticky => false, :time => 1000) %>
     <%= yield %>
   </body>
 </html>
